@@ -4,7 +4,15 @@
 
 An Excel workbook presents borrower and recovery views for management review. Its pivot-based dashboard separates fully recovered, partially recovered and written-off accounts, with segments for loan type and borrower characteristics.
 
-![Verified loan portfolio summary](images/loan-recovery-dashboard.png)
+## Original dashboard screenshots
+
+- [Open the original loan dashboard screenshot](images/original-loan-dashboard.png) from this project's initial repository.
+- [Open the original portfolio dashboard screenshot](images/original-portfolio-dashboard.png) shown on the portfolio website.
+- [Open the source-verified loan portfolio chart](images/loan-recovery-dashboard.png).
+
+The originals are shown as historical exports. The older “pending loans” label describes an outstanding amount and is not a separate status in the source table. Use the verified figures below when describing the analysis.
+
+![Original loan recovery dashboard screenshot](images/original-loan-dashboard.png)
 
 ## Approach
 
@@ -25,7 +33,7 @@ The source table records **296 fully recovered**, **154 partially recovered** an
 | --- | --- |
 | [`loan-recovery.update.xlsx`](loan-recovery.update.xlsx) | Excel workbook and dashboard |
 | [`images/loan-recovery-dashboard.png`](images/loan-recovery-dashboard.png) | Source-verified portfolio summary |
-| [`archive/legacy-loan-recovery-dashboard.png`](archive/legacy-loan-recovery-dashboard.png) | Earlier dashboard; labels “pending loans” for an outstanding amount |
+| [`images/original-loan-dashboard.png`](images/original-loan-dashboard.png), [`images/original-portfolio-dashboard.png`](images/original-portfolio-dashboard.png) | Original dashboard screenshots; the first labels an outstanding amount as “pending loans” |
 | [`M-CASH_Loan_Recovery_Documentation.docx`](archive/M-CASH_Loan_Recovery_Documentation.docx) | Project write-up |
 
 **Analyst:** [Chukwuemeka Ogo](https://mikkymo.github.io/portfolio/) · [LinkedIn](https://www.linkedin.com/in/ogochukwuemeka/)
