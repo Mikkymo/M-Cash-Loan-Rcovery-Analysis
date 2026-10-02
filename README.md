@@ -1,39 +1,60 @@
-# M-CASH loan recovery analysis
+# M-Cash Loan Recovery Analysis
+### Recovery status and outstanding exposure
 
-**Question:** How can a loan portfolio be monitored by recovery status, loan type and outstanding exposure?
+An Excel portfolio case study examining 500 borrower records to support a structured review of loan recovery status and outstanding balances.
 
-An Excel workbook presents borrower and recovery views for management review. Its pivot-based dashboard separates fully recovered, partially recovered and written-off accounts, with segments for loan type and borrower characteristics.
+**Tools:** Excel · Pivot Tables · Dashboard Design  
+**Analyst:** Chukwuemeka Ogo
 
-## Original dashboard screenshots
+**[View dashboards](docs/dashboard-gallery.md)** · [Read analytical notes](docs/analytical-notes.md)
 
-- [Open the original loan dashboard screenshot](images/original-loan-dashboard.png) from this project's initial repository.
-- [Open the original portfolio dashboard screenshot](images/original-portfolio-dashboard.png) shown on the portfolio website.
-- [Open the source-verified loan portfolio chart](images/loan-recovery-dashboard.png).
+## Business question
 
-The originals are shown as historical exports. The older “pending loans” label describes an outstanding amount and is not a separate status in the source table. Use the verified figures below when describing the analysis.
+How can a collections team monitor recovery status and identify accounts requiring closer review?
 
-![Original loan recovery dashboard screenshot](images/original-loan-dashboard.png)
+## Dashboard preview
+
+![M-Cash Loan Recovery Analysis overview](images/loan-recovery-dashboard.png)
+
+[Explore all dashboard views and version notes →](docs/dashboard-gallery.md)
+
+## Key findings
+
+| Metric | Result |
+| --- | ---: |
+| Distinct borrower IDs | 500 |
+| Original loan amounts | ₦512,453,516 |
+| Recorded outstanding exposure | ₦281,362,988.34 |
+| Fully recovered loans | 296 |
+| Partially recovered loans | 154 |
+| Written-off loans | 50 |
+
+Original loan amounts and outstanding exposure are different measures and should be reported separately.
+
+## Decision use
+
+1. Review large outstanding balances alongside recovery status before setting collection priorities.
+2. Compare recovery rates within loan types as well as borrower counts.
+3. Validate account-level balances and status definitions before operational use.
+
+These recommendations identify next steps; they do not represent measured business impact.
 
 ## Approach
 
-Review recovery status and balances at borrower level, then use the workbook's pivot tables to compare status by loan type and identify large outstanding amounts. The workbook contains **500 distinct borrower IDs**, **₦512,453,516 in `Loan_Amount`** and **₦281,362,988.34 in `Outstanding_Loan_Amount`**. These are different measures: the first sums original loan amounts; the second sums recorded outstanding exposure.
+Review balances and recovery status at borrower level, then use pivot-based views to compare loan types and borrower characteristics. Segment rates should use the relevant segment population as their denominator.
 
-The source table records **296 fully recovered**, **154 partially recovered** and **50 written-off** loans. There is no `Pending` status in that field, although an older project document refers to “pending loans.” The repository does not identify an external source for the workbook, so its provenance remains unverified.
+## Explore the project
 
-## Decision use and limits
-
-- Review large outstanding accounts and repayment status before setting collection priorities.
-- Compare *rates* within segments, not just counts; a group that makes up most borrowers will often dominate absolute totals.
-- Demographics alone do not establish borrower risk or explain default. Do not infer that tenure causes losses from an aggregate chart.
-- The workbook is an analytical exercise, not evidence of an implemented recovery programme or realised financial improvement.
-
-## Files
-
-| File | Purpose |
+| Resource | Purpose |
 | --- | --- |
-| [`loan-recovery.update.xlsx`](loan-recovery.update.xlsx) | Excel workbook and dashboard |
-| [`images/loan-recovery-dashboard.png`](images/loan-recovery-dashboard.png) | Source-verified portfolio summary |
-| [`images/original-loan-dashboard.png`](images/original-loan-dashboard.png), [`images/original-portfolio-dashboard.png`](images/original-portfolio-dashboard.png) | Original dashboard screenshots; the first labels an outstanding amount as “pending loans” |
-| [`M-CASH_Loan_Recovery_Documentation.docx`](archive/M-CASH_Loan_Recovery_Documentation.docx) | Project write-up |
+| [Excel workbook](loan-recovery.update.xlsx) | Excel workbook |
+| [Dashboard gallery](docs/dashboard-gallery.md) | Full-size views and version context |
+| [Analytical notes](docs/analytical-notes.md) | Methodology, metric definitions, and limitations |
 
-**Analyst:** [Chukwuemeka Ogo](https://mikkymo.github.io/portfolio/) · [LinkedIn](https://www.linkedin.com/in/ogochukwuemeka/)
+## Scope and limitations
+
+The workbook’s external source is not identified. These are portfolio-exercise observations, with no documented recovery intervention or realised improvement. Demographic patterns do not establish borrower risk or causes of loss.
+
+---
+
+[Portfolio](https://mikkymo.github.io/portfolio/) · [LinkedIn](https://www.linkedin.com/in/ogochukwuemeka/)
